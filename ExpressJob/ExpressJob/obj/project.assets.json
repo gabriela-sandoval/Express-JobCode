@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\ACJUL\\.nuget\\packages\\": {}
+    "C:\\Users\\gabri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
+      "projectUniqueName": "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
       "projectName": "ExpressJob",
-      "projectPath": "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
-      "packagesPath": "C:\\Users\\ACJUL\\.nuget\\packages\\",
-      "outputPath": "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\obj\\",
+      "projectPath": "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
+      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ACJUL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
