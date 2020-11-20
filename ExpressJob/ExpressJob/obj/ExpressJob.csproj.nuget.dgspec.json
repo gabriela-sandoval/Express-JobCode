@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj": {}
+    "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj": {
+    "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
+        "projectUniqueName": "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
         "projectName": "ExpressJob",
-        "projectPath": "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\obj\\",
+        "projectPath": "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
+        "packagesPath": "C:\\Users\\ACJUL\\.nuget\\packages\\",
+        "outputPath": "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACJUL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -55,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
