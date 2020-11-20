@@ -1,106 +1,48 @@
 ﻿<!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Express-Job</title>
-    <link rel="icon" type="image/png" href='~/img/logo.png'/>
-    <link rel="stylesheet" href="~/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta">
-    <link rel="stylesheet" href="~/fonts/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ExpressJob</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
-
-<body id="page-top">
-    @RenderBody()
-    <nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#">EXPRESS-JOB</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
-                                                                                      value="Menu">
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"></li>
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link shadow js-scroll-trigger" href="#registrarme" style="color: #FE8F00;">REGISTRARME</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link border rounded shadow-lg js-scroll-trigger" href="#iniciar_sesion" style="background-color: #FE8F00;">INICIAR SESIÓN</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header class="masthead" style="background-image: url('~/img/fondo_principal.png'); ">
-        <div class="intro-body" style="background-image: url('~/img/fondo_principal.png'); ">
-            <div class="container" style="max-width: 600px; height: 50%; background-image: url('../../wwwroot/img/logo.png'); background-size: contain; background-position: center; background-repeat: repeat-x; "></div>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <p class="intro-text" style="font-family: Cabin, sans-serif;">&quot;SOLUCIONES PARA TI EN UN SOLO CLIC&quot;</p><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section id="about" class="content-section text-center" style="height: 900px;background-color: #343539;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto" style="width: 50%;">
-                    <h2>Misión</h2>
-                    <p style="font-family: 'Alegreya Sans', sans-serif;">
-                        Brindar un espacio enfocado a encontrar y solicitar soluciones a diversas necesidades que un hogar o empresa requieren. Con el fin de proveer una alternativa para aquellas personas que cumplen con un oficio, se den a conocer para ser
-                        reconocidos y obtener un ingreso extra para sus familias.&nbsp;
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="container" style="        background-image: url(&quot;~/img/mision.png&quot; );
-        width: 40%;
-        height: 400px;
-        background-size: cover;
-        background-repeat: no-repeat;"></div>
-    </section>
-    <section id="download" class="download-section content-section text-center" style="background-color: rgb(98,98,98);height: 900px;">
-        <h1 style="font-size: 32px;">VISIÓN</h1>
-        <div class="container">
-            <div class="col-lg-8 mx-auto">
-                <p style="font-family: 'Alegreya Sans', sans-serif;">
-                    Ser una empresa que brinde una nueva forma de poder brindar ingresos, y seguridad para solucionar problemas o necesidad de la población, con el uso de las tecnologías, las cuales día a día forman parte de nuestra vida. No ser el cambio
-                    de la tecnología, ser el cambio con la tecnología.
-                </p>
-            </div>
-        </div>
-        <div class="container" style="        width: 40%;
-        background-image: url(&quot;~/img/vision.png&quot; );
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 400px;"></div>
-    </section>
-    <section id="contact" class="content-section text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 style="color: #FE8F00;">¡COMIENZA A SER PARTE DE ESTE PROYECTO!</h2>
-                    <ul class="list-inline banner-social-buttons">
-                        <li class="list-inline-item">&nbsp;</li>
-                        <li class="list-inline-item"><button class="btn btn-light" type="button" style="background-color: #343539;color: #FFFFFF;">REGISTRARME</button>&nbsp;</li>
-                        <li class="list-inline-item">&nbsp;</li>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ExpressJob</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="map-clean"></div>
-    <footer style="background-color: #343539;">
-        <div class="container text-center">
-            <p style="font-family: 'Alegreya Sans', sans-serif;">Copyright © Express-Job 2020</p>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - ExpressJob - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/js/jquery.min.js"></script>
-    <script src=" ~/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="~/js/grayscale.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
 </body>
-
 </html>
