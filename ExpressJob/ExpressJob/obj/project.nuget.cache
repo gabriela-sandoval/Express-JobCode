@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "YK6S6EXEwiyr3ZFQTOcR3+4BcPHa8P4oZGOvSW9lO5+tgYgImnFFCA9oKIpH4f/UQex3/SuBDDm9v9N7yLofkg==",
   "success": true,
   "projectFilePath": "D:\\1Universidad\\7Semestre\\DesarrolloWeb\\Proyecto\\Proyecto\\Desarrollo\\ExpressJobASP\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
@@ -172,5 +173,11 @@
     "C:\\Users\\ACJUL\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ACJUL\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "+XKRSDZZWvd4FFlZW5ppss6/6dWXsXdvFA1t6d5+Ce1HggjW6Qlmvofpw5Dp2DJypDu6dGYuWeA7aw9w5NBtdw==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\Express-JobCode\\ExpressJob\\ExpressJob\\ExpressJob.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> main
   "logs": []
 }
