@@ -15,4 +15,12 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\img\fondo_principal.png" />
+    <None Include="wwwroot\img\logo.png" />
+    <None Include="wwwroot\img\logo_mini.png" />
+    <None Include="wwwroot\img\mision.png" />
+    <None Include="wwwroot\img\vision.png" />
+  </ItemGroup>
+
 </Project>
