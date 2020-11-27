@@ -3,20 +3,27 @@
     //Prueba
 
 }
-<div class=" row">
-    <div class="com-md-6 offset-md-3">
-        <div class="card login-logout-tab">
-            <div class="card-header">
+
+<div class="masthead" style="background-image:url('@Url.Content("~/img/fondo_principal.png")');">
+    <div class="container" style="width:auto; height:100px">
+        <button class="btn btn-link btn-circle" type="button" style="background-image: url('@Url.Content("~/img/boton_atras.png")');
+                background-size: cover;background-repeat: no-repeat;width: 50px;height: 50px; border:none; float:left"
+                onClick="history.go(-1)">
+        </button>
+    </div>
+    <div class="com-md-6 offset-md-3" style="width:50%">
+        <div class="card login-logout-tab" style="background:none; border:none">
+            <div class="card-header" style="background: #343539; border-radius:10px; opacity:0.6; border:none">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href='/Identity/Account/Login'>Sing in</a>
+                        <a class="nav-link text-light" href='/Identity/Account/Login'>Iniciar sesión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href='/Identity/Account/Register'>Sing Up</a>
+                        <a class="nav-link text-light" href='/Identity/Account/Register'>Registrarme</a>
                     </li>
                 </ul>
             </div>
-            <div class="card-content">
+            <div class="card-content"  style="background:#343539; opacity:.80; border-radius:10px">
                 <div class="row">
                     <div class="col-md-12">
                         @RenderBody()
@@ -29,17 +36,4 @@
 
 @section Scripts{ 
     @RenderSection("Scripts", required: false)
-    
-<script>
-    $(function () {
-        var current = this.location.pathname;
-        $('nav-tabs li a').each(function () {
-            var $this = $(this);
-            if (current.indexOf(this.attr('href')) !== -1) {
-                $this.addClass('active');
-            }
-        })
-    })
-</script>
-
 }

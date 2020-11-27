@@ -14,8 +14,8 @@
 </head>
 
 <body id="page-top">
+    <h1 class="sr-only">Express-Job</h1>
     @RenderBody()
-    
     <footer style="background-color: #343539;">
         <div class="container text-center">
             <p style="font-family: 'Alegreya Sans', sans-serif;">Copyright © Express-Job 2020</p>
@@ -25,6 +25,7 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="~/Scripts/grayscale.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>

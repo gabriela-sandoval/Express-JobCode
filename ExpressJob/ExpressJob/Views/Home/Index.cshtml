@@ -3,6 +3,7 @@
 }
 
 <nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav">
+    <h2 class="sr-only">Inicio</h2>
     <div class="container">
         <a class="navbar-brand js-scroll-trigger"
            asp-area="" asp-controller="Home"
@@ -35,7 +36,7 @@
                 <div class="col-lg-8 mx-auto">
                     <p class="intro-text" style="font-family: Cabin, sans-serif;">&quot;SOLUCIONES PARA TI EN UN SOLO CLIC&quot;</p>
                     <a class="btn btn-link btn-circle" role="button" href="#mision"
-                       style="        background-image: url('@Url.Content("~/img/boton_abajo.png")'); background-size: cover; background-repeat: no-repeat; border: none"><i class="fa fa-angle-double-down animated"></i></a>
+                       style="background-image: url('@Url.Content("~/img/boton_abajo.png")'); background-size: cover; background-repeat: no-repeat; border: none"><i class="fa fa-angle-double-down animated"></i></a>
                 </div>
             </div>
         </div>
@@ -61,7 +62,7 @@
     </div>
 </section>
 <section id="vision" class="download-section content-section text-center" style="background-color: rgb(98,98,98);height: 900px;">
-    <h1 style="font-size: 32px;">VISIÓN</h1>
+    <h1 style="font-size: 32px;">Visión</h1>
     <div class="container">
         <div class="col-lg-8 mx-auto">
             <p style="font-family: 'Alegreya Sans', sans-serif;">
@@ -80,10 +81,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <h2 style="color: #FE8F00;">¡COMIENZA A SER PARTE DE ESTE PROYECTO!</h2>
+                <h2 style="color: #FE8F00;">¡Comienza a ser parte de este proyecto!</h2>
                 <ul class="list-inline banner-social-buttons">
                     <li class="list-inline-item">&nbsp;</li>
-                    <li class="list-inline-item"><button class="btn btn-light" type="button" style="background-color: #343539;color: #FFFFFF;">REGISTRARME</button>&nbsp;</li>
+                    <li class="list-inline-item">
+                        <button class="btn btn-light" type="button" href="/Identity/Account/Register" style="background-color: #343539;color: #FFFFFF;">REGISTRARME</button>&nbsp;</li>
                     <li class="list-inline-item">&nbsp;</li>
                 </ul>
             </div>
