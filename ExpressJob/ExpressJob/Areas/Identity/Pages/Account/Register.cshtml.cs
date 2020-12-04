@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using ExpressJob.Domain;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace ExpressJob.Areas.Identity.Pages.Account
 {
