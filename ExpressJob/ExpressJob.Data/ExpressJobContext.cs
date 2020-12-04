@@ -11,7 +11,7 @@ using ExpressJob.Domain;
 
 namespace ExpressJob.Data
 {
-    public class ExpressJobContext : IdentityDbContext<ExpressJobUser>
+    public class ExpressJobContext : IdentityDbContext<ExpressJobUser, IdentityRole, string>
     
     {
        public DbSet<ExpressJobUser> ExpressUsers { get; set; }
