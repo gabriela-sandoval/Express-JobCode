@@ -26,7 +26,7 @@ namespace ExpressJob
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ExpressJobContext>(options =>
-                   options.UseSqlServer(Configuration.GetConnectionString("ExpressJobContextConnection"))
+                   options.UseSqlServer(Configuration.GetConnectionString("ExpressJobContextConnection "))
             );
 
             services.AddControllersWithViews();
