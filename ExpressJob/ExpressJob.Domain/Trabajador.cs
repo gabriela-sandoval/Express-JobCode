@@ -14,6 +14,8 @@ namespace ExpressJob.Domain
 
         public string TelefonoFijo { get; set; }
 
+        public string TelefonoMovil { get; set; }
+
         public Municipio Municipio { get; set; }
 
     }

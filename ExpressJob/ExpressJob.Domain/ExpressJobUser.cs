@@ -17,10 +17,5 @@ namespace ExpressJob.Domain
         [Column(TypeName = "nvarchar(100)")]
         public string Apellidos { get; set; }
 
-        [Column(TypeName = "nvarchar(100)")]
-        public string TelefonoMovil { get; set; }
-
-        public Genero Genero { get; set; }
-
     }
 }
