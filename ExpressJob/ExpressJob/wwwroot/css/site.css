@@ -4516,9 +4516,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    background:none;
+    border: none;
     border-radius: .25rem
 }
 
@@ -4567,8 +4566,11 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: rgba(0,0,0,.03);
-    border-bottom: 1px solid rgba(0,0,0,.125)
+    background-color: #343539;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-radius: 10px;
+    opacity: 0.6;
+    border: none
 }
 
     .card-header:first-child {
@@ -4578,6 +4580,12 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     .card-header + .list-group .list-group-item:first-child {
         border-top: 0
     }
+
+.card-content {
+    background: #343539;
+    opacity: .80;
+    border-radius: 10px
+}
 
 .card-footer {
     padding: .75rem 1.25rem;
@@ -10350,6 +10358,12 @@ a {
     height: 900px;
 }
 
+.container-auth
+{
+    width:auto !important;
+    height:100px !important;
+}
+
 .img-mision {
     background-image: url(../img/mision.png);
     width: 40%;
@@ -10395,6 +10409,16 @@ a {
     border-radius: 0
 }
 
+.btn-atras {
+    background-image: url( ../img/boton_atras.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:50px;
+    height:50px;
+    border:none;
+    float:left
+}
+
 .btn-default {
     color: #42dca3;
     border: 1px solid #42dca3;
@@ -10407,6 +10431,10 @@ a {
         outline: none;
         background-color: #42dca3
     }
+
+.com-md-6-width{
+    width:50%
+}
 
 ul.banner-social-buttons {
     margin-top: 0

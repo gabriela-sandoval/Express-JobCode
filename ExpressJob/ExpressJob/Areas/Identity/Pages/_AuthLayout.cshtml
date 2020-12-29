@@ -1,19 +1,14 @@
 ﻿@{
     Layout = "/Views/Shared/_Layout.cshtml";
-    //Prueba
-
 }
 
-<div class="masthead" style="background-image:url('@Url.Content("~/img/fondo_principal.png")');">
-    <div class="container" style="width:auto; height:100px">
-        <button class="btn btn-link btn-circle" type="button" style="background-image: url('@Url.Content("~/img/boton_atras.png")');
-                background-size: cover;background-repeat: no-repeat;width: 50px;height: 50px; border:none; float:left"
-                onClick="history.go(-1)">
-        </button>
+<div class="masthead fondo-principal">
+    <div class="container container-auth">
+        <button class="btn btn-link btn-circle btn-atras" type="button" onClick="history.go(-1)"></button>
     </div>
-    <div class="com-md-6 offset-md-3" style="width:50%">
-        <div class="card login-logout-tab" style="background:none; border:none">
-            <div class="card-header" style="background: #343539; border-radius:10px; opacity:0.6; border:none">
+    <div class="com-md-6 offset-md-3 com-md-6-width">
+        <div class="card login-logout-tab">
+            <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
                         <a class="nav-link text-light" href='/Identity/Account/Login'>Iniciar sesión</a>
@@ -23,7 +18,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="card-content"  style="background:#343539; opacity:.80; border-radius:10px">
+            <div class="card-content">
                 <div class="row">
                     <div class="col-md-12">
                         @RenderBody()
