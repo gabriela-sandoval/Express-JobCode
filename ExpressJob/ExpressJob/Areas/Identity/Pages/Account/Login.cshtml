@@ -6,16 +6,19 @@
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
 
-<form method="post" style="color: #343539">
+<form method="post" class="post-method">
     <h2 class="sr-only">Iniciar sesión</h2>
-    <div class="container"
-         style="background-image: url('@Url.Content("~/img/logo.png")');
-            background-size: contain;background-repeat: no-repeat;width:auto; height:100px; margin-top: 20px; margin-bottom: 20px; background-position: center"></div>
-    <div class="container"><input class="form-control" type="email" name="Email" placeholder="Correo electrónico" style="width:50%; color: white; background:none; border-bottom:outset; margin-bottom:20px; margin-left:auto; margin-right:auto"></div>
-    <div class="container"><input class="form-control" type="password" name="password" placeholder="Contraseña" style="width: 50%; color: white; background:none; border-bottom:outset; margin-bottom:20px; margin-left:auto; margin-right:auto"></div>
+    <div class="container container-logo"></div>
     <div class="container">
-        <button class="btn btn-primary btn-block text-center" type="ingresar" style="background-color: #FE8F00; width:30%; border-radius:5px; color:white; margin-left:auto; margin-right:auto">INGRESAR</button>
-    </div><a class="forgot" href="#" style="margin:20px; color: dimgray;">¿Olvidaste tu contraseña?</a>
+        <input class="form-control container-input" type="email" name="Email" placeholder="Correo electrónico">
+    </div>
+    <div class="container">
+        <input class="form-control container-input" type="password" name="password" placeholder="Contraseña">
+    </div>
+    <div class="container">
+        <button class="btn btn-primary btn-block text-center btn-orange" type="button">INGRESAR</button>
+    </div>
+    <a class="forgot a-link a-link-color" href="#">¿Olvidaste tu contraseña?</a>
 </form>
 
 @section Scripts {
