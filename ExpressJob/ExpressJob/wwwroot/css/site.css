@@ -208,7 +208,9 @@ th {
 
 label {
     display: inline-block;
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
+    font-family: 'Century Gothic';
+    text-align:left
 }
 
 button {
@@ -581,7 +583,7 @@ pre {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
 }
 
 .no-gutters {
@@ -2572,7 +2574,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-primary {
-    color:
+    color: white;
     background-color: #212529;
     border-color: #212529;
 }
@@ -10021,7 +10023,10 @@ a.text-warning:focus, a.text-warning:hover {
 }
 
 .text-danger {
-    color: #dc3545 !important
+    color: red !important;
+    font-family:'Century Gothic';
+    font-size: 13px;
+    text-align:left
 }
 
 a.text-danger:focus, a.text-danger:hover {
@@ -10543,7 +10548,7 @@ img::-moz-selection {
 }
 
 .p-font {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Century Gothic'
 }
 
 .a-link {
