@@ -10562,3 +10562,14 @@ img::-moz-selection {
 .a-link-color:hover {
     color: white
 }
+
+.nav-link-orange {
+    background: #FE8F00 !important;
+    border:none !important
+}
+
+.nav-link-font {
+    color: #FE8F00 !important;
+    background: rgba(0,0,0,.175) !important;
+    border:none !important
+}
