@@ -10,12 +10,23 @@ namespace ExpressJob.Domain
     // Add profile data for application users by adding properties to the ExpressJobUser class
     public class ExpressJobUser : IdentityUser
     {
+
+        public ExpressJobUser()
+        {
+           
+
+        }
+
         [PersonalData]
         [Column(TypeName = "nvarchar(100)")]
         public string Nombre { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
         public string Apellidos { get; set; }
+
+       public string TrabajadorId { get; set; }
+
+        //public virtual Trabajador Trabajador { get; set; }
 
     }
 }

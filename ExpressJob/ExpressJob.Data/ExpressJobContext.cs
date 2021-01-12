@@ -12,11 +12,15 @@ using ExpressJob.Domain;
 namespace ExpressJob.Data
 {
     public class ExpressJobContext : IdentityDbContext<ExpressJobUser, IdentityRole, string>
-    
-    {
-       public DbSet<ExpressJobUser> ExpressUsers { get; set; }
 
-       public DbSet<Trabajador> Trabajadors { get; set; }
+    {
+        public DbSet<ExpressJobUser> ExpressUsers { get; set; }
+
+        public DbSet<Trabajador> Trabajadors { get; set; }
+
+        public DbSet<Servicio> Servicios { get; set; }
+
+        public DbSet<TrabajadorServicio> TrabajadorServicios { get; set; }
 
 
         public ExpressJobContext(DbContextOptions<ExpressJobContext> options)
@@ -29,13 +33,10 @@ namespace ExpressJob.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
 
-
-
-
+            builder.Entity<TrabajadorServicio>()
+                .HasKey(x => new { x.ServicioId, x.TrabajadorId });
+                
 
         }
 

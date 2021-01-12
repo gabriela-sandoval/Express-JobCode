@@ -6,10 +6,16 @@ using System.Text;
 
 namespace ExpressJob.Domain
 {
-   public  class Trabajador
+    public class Trabajador
     {
+        public Trabajador()
+        {
+            this.TrabajadorServicios = new List<TrabajadorServicio>();
+        }
+
         [Key]
-        public string id_trabajador { get; set; }
+        public int IdTrabajador { get; set; }
+       // public int TrabajadorId { get; set; }
         public string Descripcion { get; set; }
 
         public string TelefonoFijo { get; set; }
@@ -17,6 +23,10 @@ namespace ExpressJob.Domain
         public string TelefonoMovil { get; set; }
 
         public Municipio Municipio { get; set; }
+
+        public string FotoPerfil { get; set; }
+
+        public List<TrabajadorServicio> TrabajadorServicios { get; set; }
 
     }
 }
