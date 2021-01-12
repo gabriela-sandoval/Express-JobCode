@@ -1,6 +1,6 @@
 ﻿using System;
-using ExpressJob.Areas.Identity.Data;
 using ExpressJob.Data;
+using ExpressJob.Domain;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;

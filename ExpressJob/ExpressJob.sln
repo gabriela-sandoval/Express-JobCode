@@ -3,7 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressJob", "ExpressJob\ExpressJob.csproj", "{91CFDE2D-E142-40FB-BBC1-78910CE22F61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressJob", "ExpressJob\ExpressJob.csproj", "{91CFDE2D-E142-40FB-BBC1-78910CE22F61}"
+	ProjectSection(ProjectDependencies) = postProject
+		{183A888F-0E09-471C-BE3F-2F0BDCE62C4D} = {183A888F-0E09-471C-BE3F-2F0BDCE62C4D}
+		{86BF7C9F-D7CA-4C6E-8D97-DD8811D04862} = {86BF7C9F-D7CA-4C6E-8D97-DD8811D04862}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressJob.Domain", "ExpressJob.Domain\ExpressJob.Domain.csproj", "{183A888F-0E09-471C-BE3F-2F0BDCE62C4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressJob.Data", "ExpressJob.Data\ExpressJob.Data.csproj", "{86BF7C9F-D7CA-4C6E-8D97-DD8811D04862}"
+	ProjectSection(ProjectDependencies) = postProject
+		{183A888F-0E09-471C-BE3F-2F0BDCE62C4D} = {183A888F-0E09-471C-BE3F-2F0BDCE62C4D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressJob.Services", "ExpressJob.Services\ExpressJob.Services.csproj", "{FC1722E8-5B1D-4EF0-A386-742DF97E86DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86BF7C9F-D7CA-4C6E-8D97-DD8811D04862} = {86BF7C9F-D7CA-4C6E-8D97-DD8811D04862}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +31,18 @@ Global
 		{91CFDE2D-E142-40FB-BBC1-78910CE22F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91CFDE2D-E142-40FB-BBC1-78910CE22F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91CFDE2D-E142-40FB-BBC1-78910CE22F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{183A888F-0E09-471C-BE3F-2F0BDCE62C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183A888F-0E09-471C-BE3F-2F0BDCE62C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183A888F-0E09-471C-BE3F-2F0BDCE62C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183A888F-0E09-471C-BE3F-2F0BDCE62C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86BF7C9F-D7CA-4C6E-8D97-DD8811D04862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BF7C9F-D7CA-4C6E-8D97-DD8811D04862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BF7C9F-D7CA-4C6E-8D97-DD8811D04862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BF7C9F-D7CA-4C6E-8D97-DD8811D04862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC1722E8-5B1D-4EF0-A386-742DF97E86DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC1722E8-5B1D-4EF0-A386-742DF97E86DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC1722E8-5B1D-4EF0-A386-742DF97E86DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC1722E8-5B1D-4EF0-A386-742DF97E86DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
