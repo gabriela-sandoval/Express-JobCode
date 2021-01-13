@@ -1,18 +1,20 @@
 ﻿@{
     Layout = "/Views/Shared/_Layout.cshtml";
-    //Prueba
-
 }
-<div class=" row">
-    <div class="com-md-6 offset-md-3">
+
+<div class="masthead fondo-principal">
+    <div class="container container-auth">
+        <button class="btn btn-link btn-circle btn-atras" type="button" onClick="history.go(-1)"></button>
+    </div>
+    <div class="com-md-6 offset-md-3 com-md-6-width">
         <div class="card login-logout-tab">
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href='/Identity/Account/Login'>Sing in</a>
+                        <a class="nav-link text-light p-font" href='/Identity/Account/Login'>Iniciar sesión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href='/Identity/Account/Register'>Sing Up</a>
+                        <a class="nav-link text-light p-font" href='/Identity/Account/Register'>Registrarme</a>
                     </li>
                 </ul>
             </div>
@@ -29,17 +31,4 @@
 
 @section Scripts{ 
     @RenderSection("Scripts", required: false)
-    
-<script>
-    $(function () {
-        var current = this.location.pathname;
-        $('nav-tabs li a').each(function () {
-            var $this = $(this);
-            if (current.indexOf(this.attr('href')) !== -1) {
-                $this.addClass('active');
-            }
-        })
-    })
-</script>
-
 }

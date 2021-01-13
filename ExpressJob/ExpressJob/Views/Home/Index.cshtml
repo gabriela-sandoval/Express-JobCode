@@ -1,8 +1,83 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav">
+    <h2 class="sr-only">Inicio</h2>
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" asp-area="" asp-controller="Home" asp-action="Index">
+            EXPRESS-JOB
+        </a>
+        <button data-toggle="collapse"
+                class="navbar-toggler navbar-toggler-right"
+                data-target="#navbarResponsive"
+                type="button" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation"
+                value="Menu">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"></li>
+                <partial name="/Views/Shared/_LoginPartial.cshtml" />
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="masthead fondo-principal">
+    <div class="intro-body fondo-principal">
+        <div class="container container-img"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="intro-text intro-text-font">&quot;SOLUCIONES PARA TI EN UN SOLO CLIC&quot;</p>
+                    <a class="btn btn-link btn-circle btn-background" role="button" href="#mision">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="mision" class="content-section text-center content-mision">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto col-mision">
+                <h2>Misión</h2>
+                <p class="p-font">
+                    Brindar un espacio enfocado a encontrar y solicitar soluciones a diversas necesidades que un hogar o empresa requieren. Con el fin de proveer una alternativa para aquellas personas que cumplen con un oficio, se den a conocer para ser
+                    reconocidos y obtener un ingreso extra para sus familias.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container img-mision">
+    </div>
+</section>
+<section id="vision" class="download-section content-section text-center content-vision">
+    <h2>Visión</h2>
+    <div class="container">
+        <div class="col-lg-8 mx-auto">
+            <p class="p-font">
+                Ser una empresa que brinde una nueva forma de poder brindar ingresos, y seguridad para solucionar problemas o necesidad de la población, con el uso de las tecnologías, las cuales día a día forman parte de nuestra vida. No ser el cambio
+                de la tecnología, ser el cambio con la tecnología.
+            </p>
+        </div>
+    </div>
+    <div class="container img-vision"></div>
+</section>
+<section id="registro" class="content-section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="h2-color">¡Comienza a ser parte de este proyecto!</h2>
+                <ul class="list-inline banner-social-buttons">
+                    <li class="list-inline-item">&nbsp;</li>
+                    <li class="list-inline-item">
+                        <button class="btn btn-light btn-registrarme" type="button" href="/Identity/Account/Register">REGISTRARME</button>&nbsp;</li>
+                    <li class="list-inline-item">&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
