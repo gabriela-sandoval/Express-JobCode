@@ -9,4 +9,8 @@
     <PackageReference Include="SendGrid" Version="9.20.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ExpressJob.Domain\ExpressJob.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

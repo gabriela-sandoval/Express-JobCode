@@ -1,12 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using ExpressJob.Data;
 using ExpressJob.Services.EmailConfirmation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +30,7 @@ namespace ExpressJob
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddMvc();
 
             services.Configure<IdentityOptions>(options =>
             {
