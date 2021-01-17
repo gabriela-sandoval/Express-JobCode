@@ -1,7 +1,9 @@
 ﻿using ExpressJob.Data;
 using ExpressJob.Domain;
 using ExpressJob.Services.IRepository;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ExpressJob.Services.Repository
@@ -15,14 +17,35 @@ namespace ExpressJob.Services.Repository
             _context = context;
         }
 
-        public Task<int> AddTrabajador(Trabajador trabajador)
+        public async Task<int> AddTrabajador(Trabajador trabajador)
         {
-            throw new System.NotImplementedException();
+            var newTrabajador = new Trabajador()
+            {
+                Descripcion = trabajador.Descripcion,
+                TelefonoFijo = trabajador.TelefonoFijo,
+                TelefonoMovil = trabajador.TelefonoMovil,
+                FotoPerfil = trabajador.FotoPerfil
+
+            };
+
+            await _context.Trabajadors.AddAsync(newTrabajador);
+            await _context.SaveChangesAsync();
+
+            return newTrabajador.IdTrabajador;
         }
 
-        public Task<List<Trabajador>> GetAllTrabajador()
+        
+
+        public async Task<List<Trabajador>> GetAllTrabajador()
         {
-            throw new System.NotImplementedException();
+            return await _context.Trabajadors
+                .Select(t => new Trabajador()
+                {
+                    Descripcion = t.Descripcion,
+                    TelefonoFijo = t.TelefonoFijo, 
+                    TelefonoMovil = t.TelefonoMovil,
+                    FotoPerfil = t.FotoPerfil
+                }).ToListAsync();
         }
     }
 }
