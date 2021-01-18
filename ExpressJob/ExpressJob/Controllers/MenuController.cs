@@ -17,5 +17,10 @@ namespace ExpressJob.Controllers
         {
             return View();
         }
+
+        public IActionResult Servicios()
+        {
+            return View();
+        }
     }
 }
