@@ -18,6 +18,16 @@ namespace ExpressJob.Controllers
             return View();
         }
 
+        public IActionResult ServiciosTrabajador()
+        {
+            return View();
+        }
+
+        public IActionResult NuevoServicioTrabajador()
+        {
+            return View();
+        }
+
         public IActionResult Servicios()
         {
             return View();
