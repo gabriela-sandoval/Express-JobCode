@@ -1,6 +1,8 @@
 using System;
 using ExpressJob.Data;
 using ExpressJob.Services.EmailConfirmation;
+using ExpressJob.Services.IRepository;
+using ExpressJob.Services.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -24,8 +26,13 @@ namespace ExpressJob
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddScoped<ITrabajorRepository ,TrabajadorRepository>();
+
             services.AddDbContext<ExpressJobContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("ExpressJobContextConnection "))
+
+             
             );
 
             services.AddControllersWithViews();
@@ -62,6 +69,19 @@ namespace ExpressJob
 
             });
 
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedEmail = true;
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 1;
+
+            })
+                .AddEntityFrameworkStores<ExpressJobContext>()
+                .AddDefaultTokenProviders();
 
             //Configuraciónn para confirmación de correo
             services.AddTransient<IEmailSender, EmailSender>();

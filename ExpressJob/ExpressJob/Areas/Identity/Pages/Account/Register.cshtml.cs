@@ -62,7 +62,7 @@ namespace ExpressJob.Areas.Identity.Pages.Account
 
             
             [Required]
-            [StringLength(100, ErrorMessage = "El {0} ebe tener al menos {2} y un máximo de {1} caracteres de longitud.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "El {0} debe tener al menos {2} y un máximo de {1} caracteres de longitud.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -99,8 +99,8 @@ namespace ExpressJob.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    await _emailSender.SendEmailAsync(Input.Email, "Confirma tu correo electronico",
+                        $"Porfavor confirma tu cuenta para <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>seleciona aquí</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

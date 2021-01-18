@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ExpressJob.Data\ExpressJob.Data.csproj" />
     <ProjectReference Include="..\ExpressJob.Domain\ExpressJob.Domain.csproj" />
   </ItemGroup>
 
