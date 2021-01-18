@@ -22,5 +22,10 @@ namespace ExpressJob.Controllers
         {
             return View();
         }
+
+        public IActionResult ListaServiciosPorCategoria()
+        {
+            return View();
+        }
     }
 }
