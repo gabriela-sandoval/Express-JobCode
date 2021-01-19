@@ -21,25 +21,10 @@ namespace ExpressJob.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddNewTrabajador(Trabajador trabajador)
+        public async Task<IActionResult> AddTrabajador(Trabajador trabajador)
         {
-            int id = await _trabajadorRepository.AddTrabajador(trabajador);
-            if ( id > 0)
-            {
-                return RedirectToAction(nameof(AddNewTrabajador), new { IsSuccesss = true, IdTrabajador = id });
-            }
-            return View();
-        }
-      
-
-        public ViewResult OfrecerServicios (bool isSuccess = false, int IdTrabajador = 0)
-        {
-            var trabajador = new Trabajador();
-
-            ViewBag.isSuccess = isSuccess;
-            ViewBag.IdTranajador = IdTrabajador;
-
-            return View(trabajador);
+            var AddTrabajador = await _trabajadorRepository.AddTrabajador(trabajador);
+            return Ok(AddTrabajador);
         }
     }
 }
