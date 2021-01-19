@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = "_LayoutMenu";
+    ViewData["Title"] = "Nuevo servicio";
+}
+
+<div class="container text-dark">
+    <div class="card shadow-lg o-hidden border-0 my-5">
+        <div class="card-body p-0">
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-flex">
+                    <div class="flex-grow-1 bg-register-image fondo-registro-servicios"></div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h4 class="text-dark mb-4" style="font-family: Lato, sans-serif;font-weight: bold;">Agregar un nuevo servicio</h4>
+                        </div>
+                        <form class="user">
+                            <div class="form-group row">
+                                <select class="selectpicker form-control" data-live-search="true">
+                                    <option data-tokens="0">Selecciona el tipo de servicio que deseas brindar</option>
+                                    <option data-tokens="1">Albañilería</option>
+                                    <option data-tokens="2">Carpintería</option>
+                                    <option data-tokens="3">Pintura</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="descripcion" rows="2" placeholder="Descripción del servicio"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Selecciona las imágenes que representan tu servicio: </label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1" placeholder="Seleccionar imagen">
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            </div>
+                            <button class="btn btn-primary text-center d-xl-flex justify-content-center align-self-center mx-auto justify-content-xl-center" type="submit" style="background-color: #FE8F00;">GUARDAR NUEVO SERVICIO</button>
+                            <hr>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
