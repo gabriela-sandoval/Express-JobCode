@@ -1,12 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using ExpressJob.Data;
 using ExpressJob.Services.EmailConfirmation;
+using ExpressJob.Services.IRepository;
+using ExpressJob.Services.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -28,16 +26,23 @@ namespace ExpressJob
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Declaracion de los servicios de repository//
+            services.AddScoped<ITrabajorRepository ,TrabajadorRepository>();
+            services.AddScoped<IServicioRepository, ServicioRepository>();
+
             services.AddDbContext<ExpressJobContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("ExpressJobContextConnection "))
+
+             
             );
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddMvc();
 
             services.Configure<IdentityOptions>(options =>
             {
-                //Configuración para Constraseña//
+                //Configuraciï¿½n para Constraseï¿½a//
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
                 options.Password.RequireNonAlphanumeric = true;
@@ -45,12 +50,12 @@ namespace ExpressJob
                 options.Password.RequiredLength = 6;
                 options.Password.RequiredUniqueChars = 1;
 
-                //Configuración para bloqueo//
+                //Configuraciï¿½n para bloqueo//
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
                 options.Lockout.MaxFailedAccessAttempts = 5;
                 options.Lockout.AllowedForNewUsers = true;
 
-                //Configuración para usuarios
+                //Configuraciï¿½n para usuarios
                 options.User.AllowedUserNameCharacters =
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
@@ -58,18 +63,30 @@ namespace ExpressJob
 
             services.ConfigureApplicationCookie(options =>
             {
-                //Configuración de cookies
+                //Configuracion de cookies
                 options.Cookie.HttpOnly = true;
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 options.SlidingExpiration = true;
 
             });
+            /* services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedEmail = true;
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 1;
 
+            })
+                .AddEntityFrameworkStores<ExpressJobContext>()
+                .AddDefaultTokenProviders();*/
 
-            //Configuraciónn para confirmación de correo
-            services.AddTransient<IEmailSender, EmailSender>();
+            //Configuracion para confirmaciï¿½n de correo
+           //services.AddTransient<IEmailSender, EmailSender>();
            
-            //Configuración de tiempo de espera de tokens
+            //Configuraciï¿½n de tiempo de espera de tokens
             services.Configure<DataProtectionTokenProviderOptions>(options =>
             {
                 options.TokenLifespan = TimeSpan.FromHours(3);
