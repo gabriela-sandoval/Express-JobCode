@@ -1,6 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@inject ExpressJob.Services.IRepository.ITrabajorRepository _trabajadorRepo
+@model ExpressJob.Domain.Trabajador
 
 
 <!DOCTYPE html>
@@ -19,6 +18,7 @@
     <link rel="stylesheet" href="/fonts/fontawesome-all.min.css">
 </head>
 
+
 <body class="text-dark bg-gradient-primary">
     <div class="container text-dark">
         <div class="card shadow-lg o-hidden border-0 my-5">
@@ -26,8 +26,10 @@
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-flex">
                         <div class="flex-grow-1 bg-register-image fondo-registro-servicios">
-                            <a class="btn btn-atras" role="button" href="index.html"></a></div>
+                            <a class="btn btn-atras" role="button" href="index.html"></a>
+                        </div>
                     </div>
+                    <form method="post" enctype="multipart/form-data" asp-action="AddTrabajador" asp-controller="TrabajadorController"></form>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">

@@ -32,7 +32,7 @@ namespace ExpressJob.Controllers
         }
       
 
-        public ViewResult AddNewTrabajador (bool isSuccess = false, int IdTrabajador = 0)
+        public ViewResult OfrecerServicios (bool isSuccess = false, int IdTrabajador = 0)
         {
             var trabajador = new Trabajador();
 

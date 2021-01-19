@@ -26,8 +26,9 @@ namespace ExpressJob
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            //Declaración de los servicios de repository//
             services.AddScoped<ITrabajorRepository ,TrabajadorRepository>();
+            services.AddScoped<IServicioRepository, ServicioRepository>();
 
             services.AddDbContext<ExpressJobContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("ExpressJobContextConnection "))
