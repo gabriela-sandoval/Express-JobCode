@@ -11298,3 +11298,59 @@ body.sidebar-toggled footer.sticky-footer {
     margin: 10px;
     border-color: #343539;
 }
+
+.titulo-menu {
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.box-servicio {
+    width: 100%;
+    height: 350px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
+.imagen-perfil-servicio {
+    height: 50px;
+    background-image: url(../img/fondo-servicios.png);
+    background-color: rgba(54,162,177,0);
+}
+
+.imagen-perfil-trabajador-servicio {
+    background-color: rgb(255,255,255);
+    margin: 0px;
+    margin-top: -20px;
+    margin-left: 35px;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+}
+
+.nombre-trabajador-servicio {
+    width: 100%;
+    margin-left: 25px;
+    height: 100%;
+    margin-top: -20px;
+}
+
+.ciudad-trabajador-servicio {
+    width: 100%;
+    margin-left: 25px;
+    height: 100%;
+    font-size: 15px;
+}
+
+.estrellas-servicio {
+    width: 50%;
+}
+
+.estrellas-detalles {
+    width: 100px;
+}
+
+.imagen-perfil-trabajador-detalles {
+    width: 200px;
+    height: 200px;
+}
