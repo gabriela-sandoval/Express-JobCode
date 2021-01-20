@@ -11355,3 +11355,12 @@ body.sidebar-toggled footer.sticky-footer {
     width: 200px;
     height: 200px;
 }
+
+.btn-orange {
+    background-color: #FE8F00;
+    width: 30%;
+    border-radius: 10px !important;
+    color: white;
+    margin-left: auto;
+    margin-right: auto
+}

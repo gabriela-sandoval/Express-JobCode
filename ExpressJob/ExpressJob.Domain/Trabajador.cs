@@ -15,11 +15,24 @@ namespace ExpressJob.Domain
 
         [Key]
         public int IdTrabajador { get; set; }
-       
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [DataType(DataType.Date)]
+        [Display(Name = "dirección")]
         public string Direccion { get; set; }
 
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [Phone]
+        [MaxLength (10)]
+        [MinLength(10)]
+        [Display(Name = "teléfono fijo")]
         public string TelefonoFijo { get; set; }
 
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [Phone]
+        [MaxLength(10)]
+        [MinLength(10)]
+        [Display(Name = "teléfono móvil")]
         public string TelefonoMovil { get; set; }
 
        // [NotMapped]

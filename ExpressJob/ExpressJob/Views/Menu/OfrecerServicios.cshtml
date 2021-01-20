@@ -18,27 +18,35 @@
                         <div class="text-center">
                             <h4 class="text-dark mb-4 titulo-menu">¡Registrate para ofrecer tus servicios!</h4>
                         </div>
-                        <form method="post"  class="user">
+                        
+                        <form method="post" class="user">
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input asp-for="TelefonoMovil" class="form-control" type="text" id="inputTelefonoMovil" placeholder="Teléfono móvil">
+                                    <span asp-validation-for="TelefonoMovil" class="text-danger"></span>
                                 </div>
                                 <div class="col-sm-6">
                                     <input asp-for="TelefonoFijo" class="form-control" type="text" id="inputTelefonoFijo" placeholder="Teléfono fijo">
+                                    <span asp-validation-for="TelefonoFijo" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <input asp-for="Direccion" class="form-control" type="text" id="inputDireccion" placeholder="Dirección">
+<<<<<<< Updated upstream
                             </div>
                             <div class="form-group row">
                                 <div class="custom-file">
                                     <label for="exampleFormControlFile1">Carga tu foto de perfil: </label>
                                     <input  class="custom-file-input" id="buttonFotoPerfil">
                                 </div>
+=======
+                                <span asp-validation-for="Direccion" class="text-danger"></span>
+>>>>>>> Stashed changes
                             </div>
                             <div class="form-group">
-                                <input type="submit" formaction="@Url.Action("AddTrabajador", "Trabajador")" value="Agregar" class="btn btn-primary"/>
+                                <input type="submit" value="REGISTRARME" class="btn btn-orange" />
                             </div>
+                            <div asp-validation-summary="All" class="text-danger"></div>
                         </form>
                     </div>
                 </div>

@@ -30,8 +30,12 @@ namespace ExpressJob.Services.Repository
 
 
             var newTrabajador = new Trabajador()
+<<<<<<< Updated upstream
             { 
 
+=======
+            {
+>>>>>>> Stashed changes
                 Direccion = trabajador.Direccion,
                 TelefonoFijo = trabajador.TelefonoFijo,
                 TelefonoMovil = trabajador.TelefonoMovil,
