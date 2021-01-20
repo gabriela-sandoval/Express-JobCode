@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ExpressJob.Domain;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace ExpressJob.Controllers
             return View();
         }
 
+        
         public IActionResult OfrecerServicios()
         {
             return View();
@@ -39,6 +41,12 @@ namespace ExpressJob.Controllers
         }
 
         public IActionResult DetallesServicio()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RegistroTrabajor(Trabajador trabajador)
         {
             return View();
         }

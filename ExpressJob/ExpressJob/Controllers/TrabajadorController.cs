@@ -14,8 +14,8 @@ namespace ExpressJob.Controllers
 {
     public class TrabajadorController : Controller
     {
-        private readonly ITrabajorRepository _trabajadorRepository = null;
-        public TrabajadorController(ITrabajorRepository trabajorRepository)
+        private readonly TrabajadorRepository _trabajadorRepository = null;
+        public TrabajadorController(TrabajadorRepository trabajorRepository)
         {
             _trabajadorRepository = trabajorRepository;
         }
@@ -23,8 +23,8 @@ namespace ExpressJob.Controllers
         [HttpPost]
         public async Task<IActionResult> AddTrabajador(Trabajador trabajador)
         {
-            var AddTrabajador = await _trabajadorRepository.AddTrabajador(trabajador);
-            return Ok(AddTrabajador);
+            var trabajadordAdd = await _trabajadorRepository.AddTrabajador(trabajador);
+            return Ok(trabajadordAdd);
         }
     }
 }

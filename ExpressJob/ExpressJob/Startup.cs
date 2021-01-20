@@ -27,8 +27,9 @@ namespace ExpressJob
         public void ConfigureServices(IServiceCollection services)
         {
             //Declaracion de los servicios de repository//
-            services.AddScoped<ITrabajorRepository ,TrabajadorRepository>();
+            services.AddScoped<TrabajadorRepository>();
             services.AddScoped<IServicioRepository, ServicioRepository>();
+            
 
             services.AddDbContext<ExpressJobContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("ExpressJobContextConnection "))
@@ -121,6 +122,7 @@ namespace ExpressJob
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
