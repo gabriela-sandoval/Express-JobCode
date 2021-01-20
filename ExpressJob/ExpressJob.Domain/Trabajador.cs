@@ -1,9 +1,10 @@
 ﻿using ExpressJob.Domain.Enum;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
-using  Microsoft.AspNetCore.Http;
 
 namespace ExpressJob.Domain
 {
@@ -23,13 +24,12 @@ namespace ExpressJob.Domain
 
         public string TelefonoMovil { get; set; }
 
-        /*public string FotoPerfil { get; set; }*/
+        [NotMapped]
+        public IFormFile FotoPerfil { get; set; }
 
         public List<TrabajadorServicio> TrabajadorServicios { get; set; }
 
-        public virtual ExpressJobUser ExpressJobUser { get; set; }
-        
-        public IFormFile FotoPerfil { get; set; }
-        
-        }
+        public virtual ICollection<ExpressJobUser> ExpressJobUser { get; set; }
+
+    }
 }
