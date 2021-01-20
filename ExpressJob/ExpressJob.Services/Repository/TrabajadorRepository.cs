@@ -15,14 +15,12 @@ namespace ExpressJob.Services.Repository
     public class TrabajadorRepository 
     {
         private readonly ExpressJobContext _context = null;
-        private readonly UserManager<ExpressJobUser> UserManager;
-        
-       
 
-        public TrabajadorRepository(ExpressJobContext context, UserManager<ExpressJobUser> userManager)
+
+
+        public TrabajadorRepository(ExpressJobContext context)
         {
             _context = context;
-            UserManager = userManager;
         }
 
         public async Task<int> AddTrabajador(Trabajador trabajador)
@@ -30,12 +28,7 @@ namespace ExpressJob.Services.Repository
 
 
             var newTrabajador = new Trabajador()
-<<<<<<< Updated upstream
-            { 
-
-=======
             {
->>>>>>> Stashed changes
                 Direccion = trabajador.Direccion,
                 TelefonoFijo = trabajador.TelefonoFijo,
                 TelefonoMovil = trabajador.TelefonoMovil,

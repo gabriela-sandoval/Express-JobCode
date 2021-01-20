@@ -27,7 +27,7 @@ namespace ExpressJob
         public void ConfigureServices(IServiceCollection services)
         {
                //Declaracion de los servicios de repository//
-               services.AddScoped<TrabajadorRepository>();
+            services.AddScoped<TrabajadorRepository>();
             services.AddScoped<ServicioRepository>();
             
 

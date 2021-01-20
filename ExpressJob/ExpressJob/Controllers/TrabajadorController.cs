@@ -27,9 +27,7 @@ namespace ExpressJob.Controllers
         }
         
         
-
-
-<<<<<<< Updated upstream
+        
         [HttpPost]
         public async Task<IActionResult> AddTrabajador(Trabajador trabajador)
         {
@@ -37,9 +35,6 @@ namespace ExpressJob.Controllers
                 return Ok(trabajadordAdd);
         }
         
-
-=======
->>>>>>> Stashed changes
         private async Task<string> UploadImage(string folferPath, IFormFile file)
         {
             folferPath += Guid.NewGuid().ToString() + "_" + file.FileName;
