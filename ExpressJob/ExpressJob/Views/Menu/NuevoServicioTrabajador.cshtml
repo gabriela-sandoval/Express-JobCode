@@ -1,4 +1,5 @@
-﻿
+﻿@inject ExpressJob.Services.Repository.ServicioRepository _ServicioRepository
+@model ExpressJob.Domain.TrabajadorServicio
 @{
     Layout = "_LayoutMenu";
     ViewData["Title"] = "Nuevo servicio";
@@ -16,13 +17,10 @@
                         <div class="text-center">
                             <h4 class="text-dark mb-4" style="font-family: Lato, sans-serif;font-weight: bold;">Agregar un nuevo servicio</h4>
                         </div>
-                        <form class="user">
+                        <form method="post" class="user">
                             <div class="form-group row">
-                                <select class="selectpicker form-control" data-live-search="true">
-                                    <option data-tokens="0">Selecciona el tipo de servicio que deseas brindar</option>
-                                    <option data-tokens="1">Albañilería</option>
-                                    <option data-tokens="2">Carpintería</option>
-                                    <option data-tokens="3">Pintura</option>
+                                <select asp-for="ServicioId" class="selectpicker form-control" data-live-search="true" asp-items="(await _ServicioRepository.GetAllServicio()).Select(x=> new SelectListItem() { Text = x.NombreServicio, Value = x.IdServicio.ToString() })">
+                                    <option value="">Porfavor seleciona tu tipo de Servicio</option>
                                 </select>
                             </div>
                             <div class="form-group">
