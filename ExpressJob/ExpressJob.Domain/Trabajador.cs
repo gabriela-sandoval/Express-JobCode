@@ -1,10 +1,8 @@
-﻿using ExpressJob.Domain.Enum;
-using Microsoft.AspNetCore.Http;
-using System;
+﻿using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+
 
 namespace ExpressJob.Domain
 {
@@ -29,7 +27,9 @@ namespace ExpressJob.Domain
 
         public List<TrabajadorServicio> TrabajadorServicios { get; set; }
 
-        public virtual ICollection<ExpressJobUser> ExpressJobUser { get; set; }
+        public int IdExpressJobUser { get; set; } 
+        
+        
 
     }
 }

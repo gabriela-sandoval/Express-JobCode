@@ -23,7 +23,7 @@ namespace ExpressJob.Services.Repository
         {
             var newTrabajador = new Trabajador()
             {
-                
+                IdExpressJobUser = tr
                 Direccion = trabajador.Direccion,
                 TelefonoFijo = trabajador.TelefonoFijo,
                 TelefonoMovil = trabajador.TelefonoMovil,
@@ -44,11 +44,14 @@ namespace ExpressJob.Services.Repository
             return await _context.Trabajadors
                 .Select(t => new Trabajador()
                 {
+                    
                     Direccion = t.Direccion,
                     TelefonoFijo = t.TelefonoFijo, 
                     TelefonoMovil = t.TelefonoMovil,
                     FotoPerfil = t.FotoPerfil
                 }).ToListAsync();
         }
+
+        
     }
 }

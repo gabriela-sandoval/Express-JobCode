@@ -27,6 +27,21 @@ namespace ExpressJob.Services.Repository
             }).ToListAsync();
         }
         
+        
+        public async Task<int> AddServico(TrabajadorServicio trabajadorServicio)
+        {
+            var newServicio = new TrabajadorServicio()
+            {
+                TrabajadorId = trabajadorServicio.TrabajadorId,
+                ServicioId = trabajadorServicio.ServicioId,
+                Descripcion = trabajadorServicio.Descripcion
+                
+            };
+            await _context.TrabajadorServicios.AddAsync(newServicio);
+            await _context.SaveChangesAsync();
+
+            return newServicio.TrabajadorId;
+        }
       
 
        
