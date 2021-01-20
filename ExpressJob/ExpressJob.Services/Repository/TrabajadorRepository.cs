@@ -1,4 +1,5 @@
-﻿using ExpressJob.Data;
+﻿using System;
+using ExpressJob.Data;
 using ExpressJob.Domain;
 using ExpressJob.Services.IRepository;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +22,7 @@ namespace ExpressJob.Services.Repository
         {
             var newTrabajador = new Trabajador()
             {
-                Descripcion = trabajador.Descripcion,
+                Direccion = trabajador.Direccion,
                 TelefonoFijo = trabajador.TelefonoFijo,
                 TelefonoMovil = trabajador.TelefonoMovil,
                 FotoPerfil = trabajador.FotoPerfil
@@ -41,7 +42,7 @@ namespace ExpressJob.Services.Repository
             return await _context.Trabajadors
                 .Select(t => new Trabajador()
                 {
-                    Descripcion = t.Descripcion,
+                    Direccion = t.Direccion,
                     TelefonoFijo = t.TelefonoFijo, 
                     TelefonoMovil = t.TelefonoMovil,
                     FotoPerfil = t.FotoPerfil
