@@ -28,7 +28,7 @@ namespace ExpressJob
         {
             //Declaracion de los servicios de repository//
             services.AddScoped<TrabajadorRepository>();
-            services.AddScoped<IServicioRepository, ServicioRepository>();
+            services.AddScoped<ServicioRepository>();
             
 
             services.AddDbContext<ExpressJobContext>(options =>
