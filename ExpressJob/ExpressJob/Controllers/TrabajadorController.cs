@@ -11,6 +11,7 @@ using ExpressJob.Services.Repository;
 using ExpressJob.Services.IRepository;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace ExpressJob.Controllers
 {
@@ -30,15 +31,23 @@ namespace ExpressJob.Controllers
         {
             if (trabajador.FotoPerfil != null)
             {
-                string folder = "trabajador/fotoPerfil/";
-                folder += trabajador.FotoPerfil.FileName+Guid.NewGuid().ToString();
-                string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
-
-                await trabajador.FotoPerfil.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+               /*string folder = "trabajador/fotoPerfil/";*/
+                /*trabajador.FotoPerfil = await UploadImage(folder, trabajador.FotoPerfil)*/
             }
 
             var trabajadordAdd = await _trabajadorRepository.AddTrabajador(trabajador);
             return Ok(trabajadordAdd);
+        }
+
+
+        private async Task<string> UploadImage(string folferPath, IFormFile file)
+        {
+            folferPath += Guid.NewGuid().ToString() + "_" + file.FileName;
+            string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folferPath);
+            await file.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+
+            return "/" + folferPath;
+
         }
     }
 }

@@ -44,11 +44,6 @@ namespace ExpressJob.Controllers
         {
             return View();
         }
-
-        [HttpPost]
-        public ViewResult RegistroTrabajor(Trabajador trabajador)
-        {
-            return View();
-        }
+        
     }
 }
