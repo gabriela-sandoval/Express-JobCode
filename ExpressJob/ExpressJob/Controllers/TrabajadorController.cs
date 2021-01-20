@@ -30,9 +30,11 @@ namespace ExpressJob.Controllers
         {
             if (trabajador.FotoPerfil != null)
             {
-                string folder = "trabajador/fotoPerfil";
+                string folder = "trabajador/fotoPerfil/";
                 folder += trabajador.FotoPerfil.FileName+Guid.NewGuid().ToString();
                 string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+
+                await trabajador.FotoPerfil.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
             }
 
             var trabajadordAdd = await _trabajadorRepository.AddTrabajador(trabajador);
