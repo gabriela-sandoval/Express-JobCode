@@ -26,5 +26,9 @@ namespace ExpressJob.Services.Repository
                 NombreServicio = x.NombreServicio
             }).ToListAsync();
         }
+        
+      
+
+       
     }
 }

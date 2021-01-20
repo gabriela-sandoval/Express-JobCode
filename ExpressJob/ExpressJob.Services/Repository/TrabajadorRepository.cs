@@ -4,6 +4,7 @@ using ExpressJob.Domain;
 using ExpressJob.Services.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,6 +23,7 @@ namespace ExpressJob.Services.Repository
         {
             var newTrabajador = new Trabajador()
             {
+                
                 Direccion = trabajador.Direccion,
                 TelefonoFijo = trabajador.TelefonoFijo,
                 TelefonoMovil = trabajador.TelefonoMovil,
