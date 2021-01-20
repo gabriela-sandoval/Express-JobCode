@@ -24,7 +24,7 @@ namespace ExpressJob.Domain
         [Column(TypeName = "nvarchar(100)")]
         public string Apellidos { get; set; }
 
-      public virtual Trabajador Trabajadores { get; set; }
+        public virtual ICollection<Trabajador> Trabajadors { get; set; }
 
       
 

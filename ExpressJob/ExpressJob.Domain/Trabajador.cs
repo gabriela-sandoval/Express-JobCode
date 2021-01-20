@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using  Microsoft.AspNetCore.Http;
 
 namespace ExpressJob.Domain
 {
@@ -16,17 +17,19 @@ namespace ExpressJob.Domain
         [Key]
         public int IdTrabajador { get; set; }
        
-        public string Descripcion { get; set; }
+        public string Direccion { get; set; }
 
         public string TelefonoFijo { get; set; }
 
         public string TelefonoMovil { get; set; }
 
-        public string FotoPerfil { get; set; }
+        /*public string FotoPerfil { get; set; }*/
 
         public List<TrabajadorServicio> TrabajadorServicios { get; set; }
 
-        public virtual ICollection<ExpressJobUser> ExpressJobUser { get; set; }
-
-    }
+        public virtual ExpressJobUser ExpressJobUser { get; set; }
+        
+        public IFormFile FotoPerfil { get; set; }
+        
+        }
 }
