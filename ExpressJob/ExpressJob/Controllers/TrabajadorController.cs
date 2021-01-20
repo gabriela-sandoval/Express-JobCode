@@ -9,20 +9,32 @@ using ExpressJob.Data;
 using ExpressJob.Domain;
 using ExpressJob.Services.Repository;
 using ExpressJob.Services.IRepository;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace ExpressJob.Controllers
 {
     public class TrabajadorController : Controller
     {
         private readonly TrabajadorRepository _trabajadorRepository = null;
-        public TrabajadorController(TrabajadorRepository trabajorRepository)
+        private readonly IWebHostEnvironment _webHostEnvironment = null;
+
+        public TrabajadorController(TrabajadorRepository trabajorRepository, IWebHostEnvironment webHostEnvironment)
         {
             _trabajadorRepository = trabajorRepository;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         [HttpPost]
         public async Task<IActionResult> AddTrabajador(Trabajador trabajador)
         {
+            if (trabajador.FotoPerfil != null)
+            {
+                string folder = "trabajador/fotoPerfil";
+                folder += trabajador.FotoPerfil.FileName+Guid.NewGuid().ToString();
+                string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+            }
+
             var trabajadordAdd = await _trabajadorRepository.AddTrabajador(trabajador);
             return Ok(trabajadordAdd);
         }

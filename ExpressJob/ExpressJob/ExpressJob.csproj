@@ -38,6 +38,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\trabajador\fotoPerfil\" />
   </ItemGroup>
 
 	<ItemGroup>
