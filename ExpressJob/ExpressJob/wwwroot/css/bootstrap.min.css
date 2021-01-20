@@ -269,7 +269,8 @@ textarea {
     resize: vertical
 }
 
-fieldset {
+
+set {
     min-width: 0;
     padding: 0;
     margin: 0;

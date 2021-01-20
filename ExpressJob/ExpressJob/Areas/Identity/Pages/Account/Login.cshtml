@@ -7,13 +7,16 @@
 }
 
 <form method="post" class="post-method">
+    <div asp-validation-summary="All" class="text-danger"></div>
     <h2 class="sr-only">Iniciar sesión</h2>
     <div class="container container-logo"></div>
     <div class="container">
         <input class="form-control container-input" type="email" name="Email" placeholder="Correo electrónico">
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
     </div>
     <div class="container">
         <input class="form-control container-input" type="password" name="password" placeholder="Contraseña">
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
     </div>
     <div class="container">
         <button class="btn btn-primary btn-block text-center btn-orange" type="ingresar">INGRESAR</button>

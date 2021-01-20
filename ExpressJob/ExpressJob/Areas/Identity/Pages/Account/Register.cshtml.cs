@@ -46,22 +46,23 @@ namespace ExpressJob.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            [Required (ErrorMessage = "El campo {0} es requerido")]
             [DataType(DataType.Text)]
             [Display(Name = "Nombre")]
             public string Nombre{ get; set; }
 
+            [Required(ErrorMessage = "El campo {0} es requerido")]
             [DataType(DataType.Text)]
             [Display(Name = "Apellidos")]
             public string Apellidos { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "El campo {0} es requerido")]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            
-            [Required]
+
+            [Required(ErrorMessage = "El campo {0} es requerido")]
             [StringLength(100, ErrorMessage = "El {0} debe tener al menos {2} y un máximo de {1} caracteres de longitud.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
@@ -89,7 +90,7 @@ namespace ExpressJob.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("Usuario creo una nueva cuenta con ocntraseña.");
+                    _logger.LogInformation("Usuario creo una nueva cuenta con contraseña.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));

@@ -10022,14 +10022,14 @@ a.text-warning:focus, a.text-warning:hover {
 }
 
 .text-danger {
-    color: red !important;
-    font-family:'Century Gothic';
+    color: #FE8F00 !important;
+    font-family: 'Century Gothic';
     font-size: 13px;
-    text-align:left
+    text-align: left
 }
 
 a.text-danger:focus, a.text-danger:hover {
-    color: #a71d2a !important
+    color: #FE8F00 !important
 }
 
 .text-light {

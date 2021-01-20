@@ -973,7 +973,7 @@ $.validator.addMethod( "require_from_group", function( value, element, options )
 		$fields.data( "being_validated", false );
 	}
 	return isValid;
-}, $.validator.format( "Please fill at least {0} of these fields." ) );
+}, $.validator.format( "Complete al menos {0} de estos campos" ) );
 
 /*
  * Lets you say "either at least X inputs that match selector Y must be filled,
@@ -1017,7 +1017,7 @@ $.validator.addMethod( "skip_or_fill_minimum", function( value, element, options
 		$fields.data( "being_validated", false );
 	}
 	return isValid;
-}, $.validator.format( "Please either skip these fields or fill at least {0} of them." ) );
+}, $.validator.format( "Omita estos campos o complete al menos {0} de ellos." ) );
 
 /* Validates US States and/or Territories by @jdforsythe
  * Can be case insensitive or require capitalization - default is case insensitive
