@@ -1,0 +1,129 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ExpressJob.Domain
+
+@inject SignInManager<ExpressJobUser> SignInManager
+@inject UserManager<ExpressJobUser> UserManager
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ExpressJob - @ViewData["Title"]</title>
+    <link rel="icon" type="image/png" href="~/img/logo_mini.png" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome-all.min.css">
+</head>
+
+<body id="page-top">
+    <h2 class="sr-only">Express-Job</h2>
+    <div id="wrapper">
+        <nav class="navbar navbar-dark bg-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 navbar-background">
+            <h3 class="sr-only">Menú</h3>
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0 logo-menu" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"></div>
+                    <div class="sidebar-brand-text mx-3"></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active color-orange" href="/Menu/Menu">
+                            <i class="fas fa-home color-orange"></i>
+                            <span class="font-menu-inicio">INICIO</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="/Menu/Servicios">
+                            <i class="fas fa-cubes"></i><span>Servicios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-backspace" id="logout"></i><span>Ir a pantalla principal</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="text-center d-none d-md-inline">
+                    <button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button>
+                </div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <h3 class="sr-only">Búsqueda</h3>
+                    <div class="container-fluid">
+                        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group">
+                                <input class="bg-light form-control border-0 small" type="text" placeholder="Buscar...">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary py-0 bg-dark" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        @* Aquí hay que agregar una condición para que aparezcan los 2 botones *@
+                        <a class="btn btn-primary border rounded border-light d-xl-flex justify-content-xl-end bg-dark" role="button" href="/Menu/OfrecerServicios">Ofrecer servicios</a>
+                        <a class="btn btn-primary border rounded border-light d-xl-flex justify-content-xl-end bg-dark" role="button" href="/Menu/ServiciosTrabajador">Mis servicios</a>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                        <span class="badge badge-danger badge-counter">3+</span>
+                                        <i class="fas fa-bell fa-fw"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
+                                         role="menu">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                        <i class="fas fa-envelope fa-fw"></i><span class="badge badge-danger badge-counter">2</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in" role="menu"></div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow" role="presentation">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                        <span class="d-none d-lg-inline mr-2 text-gray-600 small">@UserManager.GetUserName(User)</span>
+                                        <img class="border rounded-circle img-profile" src="~/img/perfil_trabajador.png">
+                                    </a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu">
+                                        <a class="dropdown-item" role="presentation" href="profile.html">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Perfil
+                                        </a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Salir
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <a class="border rounded d-inline scroll-to-top" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="/js/theme.js"></script>
+</body>
+
+</html>

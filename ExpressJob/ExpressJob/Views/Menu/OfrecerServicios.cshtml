@@ -1,0 +1,47 @@
+﻿@inject ExpressJob.Services.Repository.TrabajadorRepository _TrabajadorRepository
+@model ExpressJob.Domain.Trabajador
+
+@{
+    Layout = "_LayoutMenu";
+    ViewData["Title"] = "Registro";
+}
+
+<div class="container text-dark" xmlns="http://www.w3.org/1999/html">
+    <div class="card shadow-lg o-hidden border-0 my-5">
+        <div class="card-body p-0">
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-flex">
+                    <div class="flex-grow-1 bg-register-image fondo-registro-servicios"></div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h4 class="text-dark mb-4 titulo-menu">¡Registrate para ofrecer tus servicios!</h4>
+                        </div>
+                        
+                        <form method="post" class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input asp-for="TelefonoMovil" class="form-control" type="text" id="inputTelefonoMovil" placeholder="Teléfono móvil">
+                                    <span asp-validation-for="TelefonoMovil" class="text-danger"></span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input asp-for="TelefonoFijo" class="form-control" type="text" id="inputTelefonoFijo" placeholder="Teléfono fijo">
+                                    <span asp-validation-for="TelefonoFijo" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="Direccion" class="form-control" type="text" id="inputDireccion" placeholder="Dirección">
+                                <span asp-validation-for="Direccion" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="REGISTRARME" class="btn btn-orange" />
+                            </div>
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

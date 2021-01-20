@@ -24,7 +24,7 @@ $.extend( $.fn, {
 		// If nothing is selected, return nothing; can't chain anyway
 		if ( !this.length ) {
 			if ( options && options.debug && window.console ) {
-				console.warn( "Nothing selected, can't validate, returning nothing." );
+				console.warn( "Nada seleccionado, no se puede validar, no devuelve nada." );
 			}
 			return;
 		}
@@ -360,22 +360,22 @@ $.extend( $.validator, {
 	},
 
 	messages: {
-		required: "This field is required.",
-		remote: "Please fix this field.",
-		email: "Please enter a valid email address.",
-		url: "Please enter a valid URL.",
-		date: "Please enter a valid date.",
-		dateISO: "Please enter a valid date (ISO).",
-		number: "Please enter a valid number.",
-		digits: "Please enter only digits.",
-		equalTo: "Please enter the same value again.",
-		maxlength: $.validator.format( "Please enter no more than {0} characters." ),
-		minlength: $.validator.format( "Please enter at least {0} characters." ),
-		rangelength: $.validator.format( "Please enter a value between {0} and {1} characters long." ),
-		range: $.validator.format( "Please enter a value between {0} and {1}." ),
-		max: $.validator.format( "Please enter a value less than or equal to {0}." ),
-		min: $.validator.format( "Please enter a value greater than or equal to {0}." ),
-		step: $.validator.format( "Please enter a multiple of {0}." )
+		required: "Este campo es requerido",
+		remote: "Por favor arregla este campo.",
+		email: "Por favor, introduce una dirección de correo electrónico válida..",
+		url: "Por favor introduzca un URL válido.",
+		date: "Por favor introduzca una fecha valida.",
+		dateISO: "Ingrese una fecha válida (ISO).",
+		number: "Por favor ingrese un número valido.",
+		digits: "Por favor ingrese solo dígitos.",
+		equalTo: "Por favor, introduzca el mismo valor de nuevo",
+		maxlength: $.validator.format( "No ingrese más de {0} caracteres." ),
+		minlength: $.validator.format( "Ingrese al menos {0} caracteres." ),
+		rangelength: $.validator.format( "Ingrese un valor entre {0} y {1} caracteres." ),
+		range: $.validator.format( "Ingrese un valor entre {0} y {1}." ),
+		max: $.validator.format( "Ingrese un valor menor o igual que {0}." ),
+		min: $.validator.format( "Ingrese un valor mayor o igual que {0}." ),
+		step: $.validator.format( "Ingresa un múltiplo de {0}." )
 	},
 
 	autoCreateRanges: false,
@@ -764,7 +764,7 @@ $.extend( $.validator, {
 				val = normalizer.call( element, val );
 
 				if ( typeof val !== "string" ) {
-					throw new TypeError( "The normalizer should return a string value." );
+					throw new TypeError("El normalizador debería devolver un valor de cadena." );
 				}
 
 				// Delete the normalizer from rules to avoid treating it as a pre-defined method.
@@ -795,10 +795,10 @@ $.extend( $.validator, {
 					}
 				} catch ( e ) {
 					if ( this.settings.debug && window.console ) {
-						console.log( "Exception occurred when checking element " + element.id + ", check the '" + rule.method + "' method.", e );
+						console.log("Se produjo una excepción al verificar el elemento " + element.id + ", comprobar el '" + rule.method + "' método.", e );
 					}
 					if ( e instanceof TypeError ) {
-						e.message += ".  Exception occurred when checking element " + element.id + ", check the '" + rule.method + "' method.";
+						e.message += ".  Se produjo una excepción al verificar el elemento " + element.id + ", comprobar el '" + rule.method + "' método.";
 					}
 
 					throw e;
