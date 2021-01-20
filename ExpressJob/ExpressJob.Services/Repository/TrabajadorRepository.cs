@@ -7,37 +7,46 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
+using System.Security.Claims;
 
 namespace ExpressJob.Services.Repository
 {
-    public class TrabajadorRepository : ITrabajorRepository
+    public class TrabajadorRepository 
     {
         private readonly ExpressJobContext _context = null;
+        private readonly UserManager<ExpressJobUser> UserManager;
+        
+       
 
-        public TrabajadorRepository(ExpressJobContext context)
+        public TrabajadorRepository(ExpressJobContext context, UserManager<ExpressJobUser> userManager)
         {
             _context = context;
+            UserManager = userManager;
         }
 
         public async Task<int> AddTrabajador(Trabajador trabajador)
         {
+
+
             var newTrabajador = new Trabajador()
-            {
-                IdExpressJobUser = tr
+            { 
+
                 Direccion = trabajador.Direccion,
                 TelefonoFijo = trabajador.TelefonoFijo,
                 TelefonoMovil = trabajador.TelefonoMovil,
-                FotoPerfil = trabajador.FotoPerfil
+                //FotoPerfil = trabajador.FotoPerfil,
 
             };
+                
+                await _context.Trabajadors.AddAsync(newTrabajador);
+                await _context.SaveChangesAsync();
 
-            await _context.Trabajadors.AddAsync(newTrabajador);
-            await _context.SaveChangesAsync();
-
-            return newTrabajador.IdTrabajador;
+                return newTrabajador.IdTrabajador;
+            
         }
 
-        
+
 
         public async Task<List<Trabajador>> GetAllTrabajador()
         {
@@ -48,10 +57,11 @@ namespace ExpressJob.Services.Repository
                     Direccion = t.Direccion,
                     TelefonoFijo = t.TelefonoFijo, 
                     TelefonoMovil = t.TelefonoMovil,
-                    FotoPerfil = t.FotoPerfil
+                    //FotoPerfil = t.FotoPerfil
                 }).ToListAsync();
         }
 
-        
+
+       }
     }
-}
+

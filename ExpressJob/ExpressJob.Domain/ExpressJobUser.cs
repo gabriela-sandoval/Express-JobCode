@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Identity;
 
 namespace ExpressJob.Domain
 {
     // Add profile data for application users by adding properties to the ExpressJobUser class
-    public class ExpressJobUser : IdentityUser
+    public class ExpressJobUser : IdentityUser, IUser
     {
 
         public ExpressJobUser()
@@ -20,7 +22,7 @@ namespace ExpressJob.Domain
         [Column(TypeName = "nvarchar(100)")]
         public string Apellidos { get; set; }
 
-        public virtual Trabajador Trabajadors { get; set; }
+        public  ICollection<Trabajador> Trabajadors { get; set; }
 
       
 

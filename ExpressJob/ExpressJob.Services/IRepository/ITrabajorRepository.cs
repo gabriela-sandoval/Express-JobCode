@@ -8,7 +8,7 @@ namespace ExpressJob.Services.IRepository
 {
     public interface ITrabajorRepository
     {
-        Task<int> AddTrabajador(Trabajador trabajador);
+        Task<int> AddTrabajador(Trabajador trabajador, ExpressJobUser user);
 
         Task<List<Trabajador>> GetAllTrabajador();
 

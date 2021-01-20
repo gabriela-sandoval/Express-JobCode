@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,12 +22,16 @@ namespace ExpressJob.Domain
 
         public string TelefonoMovil { get; set; }
 
-        [NotMapped]
-        public IFormFile FotoPerfil { get; set; }
+       // [NotMapped]
+        //public IFormFile FotoPerfil { get; set; }
 
         public List<TrabajadorServicio> TrabajadorServicios { get; set; }
 
         public int IdExpressJobUser { get; set; } 
+        
+        public virtual ExpressJobUser ExpressJobUser { get; set; }
+        
+    
         
         
 
